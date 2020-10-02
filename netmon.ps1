@@ -10,4 +10,6 @@ Start-BitsTransfer -Source $url -Destination $output
 
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 
-msiexec /i $TempDir + "nmemplpro_agent.msi" PASSWORD=myAgentPassword /qn
+$final= $TempDir + 'nmemplpro_agent.msi'
+
+msiexec /i $final PASSWORD=myAgentPassword /qn
