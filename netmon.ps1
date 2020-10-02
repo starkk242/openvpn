@@ -8,3 +8,5 @@ Start-BitsTransfer -Source $url -Destination $output
 #Start-BitsTransfer -Source $url -Destination $output -Asynchronous
 
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
+
+msiexec /i nmemplpro_agent.msi PASSWORD=myAgentPassword /qn
